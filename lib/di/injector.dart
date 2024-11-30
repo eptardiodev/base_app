@@ -1,9 +1,9 @@
 
 
+import 'package:base_app/ui/home/home_bloc.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:base_app/data/dao/2fa_dao.dart';
 import 'package:base_app/domain/2fa/i_2fa_dao.dart';
-import 'package:base_app/ui/authenticator/authenticator_bloc.dart';
 
 import '../app_bloc.dart';
 import '../base/bloc_base.dart';
@@ -74,7 +74,7 @@ class Injector {
 
   _registerBloCs() {
     container.registerFactory((c) => BaseAppBloC());
-    container.registerFactory((c) => AuthenticatorBloC(container.resolve()));
+    container.registerFactory((c) => HomeBloC());
   }
 
   _registerCommon() {

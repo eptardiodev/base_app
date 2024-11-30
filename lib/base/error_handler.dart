@@ -7,7 +7,7 @@ import 'package:rxdart/rxdart.dart';
 import '../data/remote/result.dart';
 import '../res/R.dart';
 
-mixin ErrorHandlerBloC {
+mixin ErrorHandler {
   final BehaviorSubject<String?> _errorMessageController = BehaviorSubject();
 
   Stream<String?> get errorMessageStream => _errorMessageController.stream;

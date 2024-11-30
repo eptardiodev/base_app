@@ -1,9 +1,9 @@
 class GlobalRegexp {
   static RegExp urlExp = RegExp(r'(?:(?:https?|ftp)://)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
 
-  static RegExp otpauthExp = RegExp(
-      r"^(?:otpauth):\/\/(totp|hotp)(?:\/([\w:@.,;()$%\-]+))*\?(\w+=\w+)(?:\&(\w+=\w+))*$");
-  static RegExp otpLabel = RegExp(r'^([\w:@.,;()$%\-]+)$');
+  // static RegExp otpauthExp = RegExp(
+  //     r"^(?:otpauth):\/\/(totp|hotp)(?:\/([\w:@.,;()$%\-]+))*\?(\w+=\w+)(?:\&(\w+=\w+))*$");
+  // static RegExp otpLabel = RegExp(r'^([\w:@.,;()$%\-]+)$');
 
   static RegExp html = RegExp(r'<[^>]*>');
 
