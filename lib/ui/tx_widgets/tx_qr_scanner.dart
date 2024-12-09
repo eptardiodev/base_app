@@ -41,14 +41,15 @@ class QRScanner extends StatelessWidget {
               child: IconButton(
                 color: Colors.white,
                 icon: ValueListenableBuilder(
-                  valueListenable: cameraController.torchState,
+                  valueListenable: cameraController,
                   builder: (context, state, child) {
-                    switch (state as TorchState) {
-                      case TorchState.off:
-                        return Icon(Icons.flashlight_off, color: R.color.grayColor);
-                      case TorchState.on:
-                        return Icon(Icons.flashlight_on, color: R.color.whiteColor);
-                    }
+                    return Icon(Icons.flashlight_off, color: R.color.grayColor);
+                    // switch (state as TorchState) {
+                    //   case TorchState.off:
+                    //     return Icon(Icons.flashlight_off, color: R.color.grayColor);
+                    //   case TorchState.on:
+                    //     return Icon(Icons.flashlight_on, color: R.color.whiteColor);
+                    // }
                   },
                 ),
                 iconSize: 32.0,

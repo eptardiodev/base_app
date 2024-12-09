@@ -1,7 +1,14 @@
 
 
+import 'package:base_app/data/converter/user_converter.dart';
+import 'package:base_app/data/dao/common_dao.dart';
+import 'package:base_app/data/dao/user_dao.dart';
 import 'package:base_app/data/repository/user_repository.dart';
 import 'package:base_app/data/shared_preferences/shared_preferences_managment.dart';
+import 'package:base_app/domain/common/i_common_dao.dart';
+import 'package:base_app/domain/common/i_common_repository.dart';
+import 'package:base_app/domain/user/i_user_converter.dart';
+import 'package:base_app/domain/user/i_user_dao.dart';
 import 'package:base_app/domain/user/i_user_repository.dart';
 import 'package:base_app/ui/home/home_bloc.dart';
 import 'package:base_app/ui/splash/splash_bloc.dart';
@@ -65,15 +72,22 @@ class Injector {
 
   _registerMappers() {
     container.registerSingleton<I2faConverter>((c) => TwoFaConverter());
+    container.registerSingleton((c) => UserConverter());
   }
 
   _registerDaoLayer() {
     container.registerSingleton((c) => AppDatabase.instance);
+    container.registerSingleton<ICommonDao>((c) => CommonDao(
+        c.resolve()));
     container.registerSingleton<I2faDao>((c) => TwoFaDao(
+        c.resolve(), c.resolve()));
+    container.registerSingleton<IUserDao>((c) => UserDao(
         c.resolve(), c.resolve()));
   }
 
   _registerRepositoryLayer() {
+    // container.registerSingleton<ICommonRepository>((c) => CommonRepository(
+    //     c.resolve()));
     container.registerSingleton<I2faRepository>((c) => TwoFaRepository(
         c.resolve()));
     container.registerSingleton<IUserRepository>((c) => UserRepository(

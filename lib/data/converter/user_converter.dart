@@ -1,7 +1,10 @@
 import 'package:base_app/data/remote/remote_constants.dart';
+import 'package:base_app/domain/user/i_user_converter.dart';
 import 'package:base_app/domain/user/user_model.dart';
 
-class UserModelConverter {
+class UserConverter implements IUserConverter{
+
+  @override
   UserModel fromJson(Map<String, dynamic> json) {
     return UserModel(
         userId: json[RemoteConstants.user_id] ?? "",
@@ -36,6 +39,7 @@ class UserModelConverter {
         );
   }
 
+  @override
   Map<String, dynamic> toJson(UserModel model) {
     return {
       RemoteConstants.user_id: model.userId,

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:base_app/data/converter/user_model_converter.dart';
+import 'package:base_app/data/converter/user_converter.dart';
 import 'package:base_app/data/local/app_database.dart';
 import 'package:base_app/data/local/db_constants.dart';
 import 'package:base_app/domain/user/i_user_dao.dart';
@@ -11,9 +11,9 @@ import 'package:sqflite/sqflite.dart';
 
 class UserDao implements IUserDao {
   final AppDatabase _appDatabase;
-  final UserModelConverter _userModelConverter;
+  final UserConverter _userConverter;
 
-  UserDao(this._appDatabase, this._userModelConverter);
+  UserDao(this._appDatabase, this._userConverter);
 
   // @override
   // Future<List<UserModel>> getUsers() async {
@@ -134,7 +134,7 @@ class UserDao implements IUserDao {
       final data = await db.query(DBConstants.profileTable, limit: 1);
       if (data.length > 0) {
         final value = data[0][DBConstants.dataKey].objToString();
-        UserModel model = _userModelConverter.fromJson(json.decode(value));
+        UserModel model = _userConverter.fromJson(json.decode(value));
         return model;
       }
       return UserModel();
@@ -149,7 +149,7 @@ class UserDao implements IUserDao {
       Database db = await _appDatabase.db;
       final map = {
         DBConstants.idKey: user.userId,
-        DBConstants.dataKey: json.encode(_userModelConverter.toJson(user)),
+        DBConstants.dataKey: json.encode(_userConverter.toJson(user)),
         DBConstants.parentKey: DBConstants.address,
       };
       await db.insert(DBConstants.profileTable, map,
