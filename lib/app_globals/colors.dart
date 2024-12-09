@@ -18,7 +18,7 @@ class AppColor {
   final orangeLight = const Color(0xFFFCE8CB);
   final orange = const Color(0xFFF6B75C);
   final warning = const Color(0xFFF6B13F);
-  final primaryColor = const Color(0xFF49A2CC);
+  final primaryColor = const Color(0xFF012185);
 
   final blurBackground = const Color(0xc8F6F7FB);
 }

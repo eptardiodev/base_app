@@ -1,8 +1,8 @@
 
 
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 
-import '../../res/R.dart';
 
 class TXTextFieldWidget extends StatefulWidget {
   final String label;

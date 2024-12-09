@@ -1,11 +1,24 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 
+
 extension SafeSink<T> on StreamController<T> {
   void sinkAddSafe(T value) {
     if (!isClosed) sink.add(value);
   }
 }
+
+extension ObjectExtension on Object? {
+  String objToString() {
+    if (this == null) {
+      return "";
+    }
+    return this as String;
+  }
+
+  Map<String, dynamic> objToMapStringDynamic() => this as Map<String, dynamic>;
+}
+
 
 extension StringExtension on String? {
   bool isNullOrEmpty() => this == null || this?.isEmpty == true;

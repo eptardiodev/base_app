@@ -1,7 +1,5 @@
-import 'dart:async';
-
+import 'package:base_app/app_globals/R.dart';
 import 'package:base_app/base/bloc_state.dart';
-import 'package:base_app/res/R.dart';
 import 'package:flutter/material.dart';
 import 'home_bloc.dart';
 
@@ -9,7 +7,7 @@ import 'home_bloc.dart';
 
 class HomePage extends StatefulWidget {
 
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<StatefulWidget> createState() => _HomePageState();
@@ -20,46 +18,40 @@ class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
     int count = 0;
 
   @override
-  void initState() {
-    super.initState();
-
-  }
-
-  @override
-  bool shouldReLogin() => true;
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget buildWidget(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: R.color.primaryColor,
         onPressed: () {
           setState(() {
             count += 1;
           });
         },
         child: Container(
-          padding: EdgeInsets.all(5),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(5),
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.white,
           ),
           child: Icon(
             Icons.add,
-            color: Colors.blue.shade800,
+            color: R.color.primaryColor,
           ),
         ),
       ),
-      body: Center(child: Text(count.toString())),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              count.toString()),
+            Text(R.string.hello)
+          ],
+        )
+      ),
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: R.color.primaryColor,
         leading: IconButton(
-          icon: Icon(Icons.other_houses_outlined),
+          icon: const Icon(Icons.other_houses_outlined),
           onPressed: () {  },
         ),
       ),

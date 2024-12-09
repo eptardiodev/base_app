@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accept": MessageLookupByLibrary.simpleMessage("Accept"),
         "appName": MessageLookupByLibrary.simpleMessage("BaseApp"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "contacts_employee": MessageLookupByLibrary.simpleMessage("Employees"),
         "copiedToClipboard":
             MessageLookupByLibrary.simpleMessage("Copied to clipboard!"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -34,21 +35,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterKeyManually":
             MessageLookupByLibrary.simpleMessage("Enter key manually"),
         "fieldRequired": MessageLookupByLibrary.simpleMessage("Field required"),
-        "invalidBase32Chars":
-            MessageLookupByLibrary.simpleMessage("Invalid base32 characters"),
-        "label": MessageLookupByLibrary.simpleMessage("Label"),
-        "labelTextWarning": MessageLookupByLibrary.simpleMessage(
-            "Label is empty, please check this value"),
+        "hello": MessageLookupByLibrary.simpleMessage("Hello"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "operationConfirmation": MessageLookupByLibrary.simpleMessage(
             "Are you sure of this operation?"),
-        "otpLabelWarning": MessageLookupByLibrary.simpleMessage(
-            "OTP label is an alphanumeric string without spaces :@.,;()\\\$% are also allowed"),
         "permissionDenied":
             MessageLookupByLibrary.simpleMessage("Permission denied"),
         "qrScanner": MessageLookupByLibrary.simpleMessage("QR"),
-        "secretCode": MessageLookupByLibrary.simpleMessage("Secret key"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

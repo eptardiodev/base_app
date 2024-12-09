@@ -1,16 +1,19 @@
-import 'package:base_app/ui/home/home_page.dart';
+import 'package:base_app/app_globals/R.dart';
+import 'package:base_app/data/remote/remote_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:base_app/app_bloc.dart';
-import 'package:base_app/base/navigation_utils.dart';
-import 'package:base_app/res/R.dart';
-import 'package:base_app/ui/tx_widgets/tx_qr_scanner.dart';
+
 
 import 'base/bloc_state.dart';
 import 'generated/l10n.dart';
 
 class BaseApp extends StatefulWidget {
-  const BaseApp({super.key});
+  final Widget initPage;
+
+  const BaseApp({
+    required this.initPage,
+    super.key});
   static GlobalKey<NavigatorState> appGlobalKey = GlobalKey<NavigatorState>();
 
   @override
@@ -24,14 +27,14 @@ class _BaseAppState
     return MaterialApp(
       navigatorKey: BaseApp.appGlobalKey,
       debugShowCheckedModeBanner: false,
-      initialRoute: NavigationUtils.homeRoute,
+      // initialRoute: NavigationUtils.homeRoute,
       builder: (BuildContext context, Widget? child) {
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1)),
           child: child!,
         );
       },
-      title: "BaseApp",
+      title: RemoteConstants.nameApp,
       theme: ThemeData(
           appBarTheme: AppBarTheme(
             iconTheme: IconThemeData(color: R.color.whiteColor),
@@ -41,6 +44,7 @@ class _BaseAppState
           brightness: Brightness.light,
           primaryColor: R.color.primaryColor,
           textSelectionTheme: TextSelectionThemeData(cursorColor: R.color.primaryColor)),
+      home: widget.initPage,
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -48,19 +52,15 @@ class _BaseAppState
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      onGenerateRoute: (RouteSettings settings) {
-        if(settings.name == NavigationUtils.homeRoute) {
-          return MaterialPageRoute(
-              settings: const RouteSettings(name: NavigationUtils.homeRoute),
-              builder: (_) => const HomePage());
-        } else if (settings.name == NavigationUtils.scanRoute) {
-          return MaterialPageRoute(
-              settings: const RouteSettings(name: NavigationUtils.scanRoute),
-              builder: (_) => QRScanner());
-        }
-        assert(false, 'Need to implement ${settings.name}');
-        return null;
-      },
+      // onGenerateRoute: (RouteSettings settings) {
+      //   if(settings.name == NavigationUtils.homeRoute) {
+      //     return MaterialPageRoute(
+      //         settings: const RouteSettings(name: NavigationUtils.homeRoute),
+      //         builder: (_) => const HomePage());
+      //   }
+      //   assert(false, 'Need to implement ${settings.name}');
+      //   return null;
+      // },
     );
   }
 }

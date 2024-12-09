@@ -22,4 +22,9 @@ class DBConstants {
 
   ///table names
   static const String authenticatedEntityTable = 'authenticated_entity_table';
+  static final String profileTable = 'profile_table';
+
+  ///keys for use in parent_key column
+  static final String address = 'address';
+
 }

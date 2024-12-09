@@ -1,6 +1,6 @@
 
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
-import '../../res/R.dart';
 
 class TXTextWidget extends StatelessWidget {
   final String text;

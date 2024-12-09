@@ -1,6 +1,10 @@
 
 
+import 'package:base_app/data/repository/user_repository.dart';
+import 'package:base_app/data/shared_preferences/shared_preferences_managment.dart';
+import 'package:base_app/domain/user/i_user_repository.dart';
 import 'package:base_app/ui/home/home_bloc.dart';
+import 'package:base_app/ui/splash/splash_bloc.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:base_app/data/dao/2fa_dao.dart';
 import 'package:base_app/domain/2fa/i_2fa_dao.dart';
@@ -8,7 +12,7 @@ import 'package:base_app/domain/2fa/i_2fa_dao.dart';
 import '../app_bloc.dart';
 import '../base/bloc_base.dart';
 import '../data/converter/2fa_converter.dart';
-import '../data/dao/_base/app_database.dart';
+import '../data/local/app_database.dart';
 import '../data/repository/2fa_repository.dart';
 import '../domain/2fa/i_2fa_converter.dart';
 import '../domain/2fa/i_2fa_repository.dart';
@@ -65,19 +69,38 @@ class Injector {
 
   _registerDaoLayer() {
     container.registerSingleton((c) => AppDatabase.instance);
-    container.registerSingleton<I2faDao>((c) => TwoFaDao(c.resolve(), c.resolve()));
+    container.registerSingleton<I2faDao>((c) => TwoFaDao(
+        c.resolve(), c.resolve()));
   }
 
   _registerRepositoryLayer() {
-    container.registerSingleton<I2faRepository>((c) => TwoFaRepository(c.resolve()));
+    container.registerSingleton<I2faRepository>((c) => TwoFaRepository(
+        c.resolve()));
+    container.registerSingleton<IUserRepository>((c) => UserRepository(
+        c.resolve(), c.resolve(), c.resolve(),));
   }
 
   _registerBloCs() {
     container.registerFactory((c) => BaseAppBloC());
     container.registerFactory((c) => HomeBloC());
+    container.registerFactory((c) => SplashBloc(
+        c.resolve(), c.resolve()));
   }
 
   _registerCommon() {
     container.registerSingleton<Logger>((c) => LoggerImpl());
+    container.registerSingleton((c) => SharedPreferencesManager(),);
   }
+
+  ///returns the current instance of the logger
+  Logger getLogger() => container.resolve();
+
+  ///returns a new bloc instance
+  // T getNewBloc<T extends BaseBloC>() => container.resolve();
+  //
+  // NetworkHandler get networkHandler => container.resolve();
+  //
+  SharedPreferencesManager get sharedP => container.resolve();
+  //
+  // T getDependency<T>() => container.resolve();
 }

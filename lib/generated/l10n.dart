@@ -60,66 +60,6 @@ class S {
     );
   }
 
-  /// `Invalid base32 characters`
-  String get invalidBase32Chars {
-    return Intl.message(
-      'Invalid base32 characters',
-      name: 'invalidBase32Chars',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Label is empty, please check this value`
-  String get labelTextWarning {
-    return Intl.message(
-      'Label is empty, please check this value',
-      name: 'labelTextWarning',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Secret key`
-  String get secretCode {
-    return Intl.message(
-      'Secret key',
-      name: 'secretCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Label`
-  String get label {
-    return Intl.message(
-      'Label',
-      name: 'label',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `OTP label is an alphanumeric string without spaces :@.,;()\$% are also allowed`
-  String get otpLabelWarning {
-    return Intl.message(
-      'OTP label is an alphanumeric string without spaces :@.,;()\\\$% are also allowed',
-      name: 'otpLabelWarning',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `QR`
-  String get qrScanner {
-    return Intl.message(
-      'QR',
-      name: 'qrScanner',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Accept`
   String get accept {
     return Intl.message(
@@ -140,71 +80,11 @@ class S {
     );
   }
 
-  /// `No`
-  String get no {
+  /// `Employees`
+  String get contacts_employee {
     return Intl.message(
-      'No',
-      name: 'no',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Yes`
-  String get yes {
-    return Intl.message(
-      'Yes',
-      name: 'yes',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Ok`
-  String get ok {
-    return Intl.message(
-      'Ok',
-      name: 'ok',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Field required`
-  String get fieldRequired {
-    return Intl.message(
-      'Field required',
-      name: 'fieldRequired',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Delete All`
-  String get deleteAll {
-    return Intl.message(
-      'Delete All',
-      name: 'deleteAll',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Delete`
-  String get delete {
-    return Intl.message(
-      'Delete',
-      name: 'delete',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Are you sure of this operation?`
-  String get operationConfirmation {
-    return Intl.message(
-      'Are you sure of this operation?',
-      name: 'operationConfirmation',
+      'Employees',
+      name: 'contacts_employee',
       desc: '',
       args: [],
     );
@@ -220,11 +100,81 @@ class S {
     );
   }
 
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete All`
+  String get deleteAll {
+    return Intl.message(
+      'Delete All',
+      name: 'deleteAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enable permission in settings?`
+  String get enablePermission {
+    return Intl.message(
+      'Enable permission in settings?',
+      name: 'enablePermission',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter key manually`
   String get enterKeyManually {
     return Intl.message(
       'Enter key manually',
       name: 'enterKeyManually',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Field required`
+  String get fieldRequired {
+    return Intl.message(
+      'Field required',
+      name: 'fieldRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hello`
+  String get hello {
+    return Intl.message(
+      'Hello',
+      name: 'hello',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure of this operation?`
+  String get operationConfirmation {
+    return Intl.message(
+      'Are you sure of this operation?',
+      name: 'operationConfirmation',
       desc: '',
       args: [],
     );
@@ -240,11 +190,31 @@ class S {
     );
   }
 
-  /// `Enable permission in settings?`
-  String get enablePermission {
+  /// `QR`
+  String get qrScanner {
     return Intl.message(
-      'Enable permission in settings?',
-      name: 'enablePermission',
+      'QR',
+      name: 'qrScanner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
       desc: '',
       args: [],
     );

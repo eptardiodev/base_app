@@ -1,8 +1,9 @@
 import 'package:base_app/app.dart';
-import 'package:base_app/res/values/colors.dart';
-import 'package:base_app/res/values/dimens.dart';
-import 'package:base_app/res/values/images.dart';
-import 'package:base_app/res/values/sounds.dart';
+import 'package:base_app/app_globals/colors.dart';
+import 'package:base_app/app_globals/dimens.dart';
+import 'package:base_app/app_globals/images.dart';
+import 'package:base_app/app_globals/sounds.dart';
+
 
 import '../generated/l10n.dart';
 
