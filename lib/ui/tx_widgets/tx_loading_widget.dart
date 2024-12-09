@@ -1,7 +1,6 @@
-
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 
-import '../../res/R.dart';
 
 class TXLoadingWidget extends StatelessWidget {
   final Stream<bool> loadingStream;

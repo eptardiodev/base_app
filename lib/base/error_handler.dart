@@ -1,11 +1,11 @@
 
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:base_app/utils/extensions.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../data/remote/result.dart';
-import '../res/R.dart';
 
 mixin ErrorHandler {
   final BehaviorSubject<String?> _errorMessageController = BehaviorSubject();

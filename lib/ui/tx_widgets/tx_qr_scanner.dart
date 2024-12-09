@@ -2,12 +2,12 @@
 
 import 'dart:math';
 
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:base_app/ui/tx_widgets/tx_main_app_bar_widget.dart';
 
 import '../../base/navigation_utils.dart';
-import '../../res/R.dart';
 
 class QRScanner extends StatelessWidget {
   final MobileScannerController cameraController = MobileScannerController();

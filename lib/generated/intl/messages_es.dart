@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accept": MessageLookupByLibrary.simpleMessage("Aceptar"),
         "appName": MessageLookupByLibrary.simpleMessage("BaseApp"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancelar"),
+        "contacts_employee": MessageLookupByLibrary.simpleMessage("Empleados"),
         "copiedToClipboard":
             MessageLookupByLibrary.simpleMessage("Copiado al portapapeles!"),
         "delete": MessageLookupByLibrary.simpleMessage("Eliminar"),
@@ -35,21 +36,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ingresar clave manualmente"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("Campo requerido"),
-        "invalidBase32Chars": MessageLookupByLibrary.simpleMessage(
-            "Caracteres base32 no válidos"),
-        "label": MessageLookupByLibrary.simpleMessage("Etiqueta"),
-        "labelTextWarning": MessageLookupByLibrary.simpleMessage(
-            "La etiqueta está vacía, por favor chequee este valor"),
+        "hello": MessageLookupByLibrary.simpleMessage("Hola"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "operationConfirmation": MessageLookupByLibrary.simpleMessage(
             "Está seguro de esta operación?"),
-        "otpLabelWarning": MessageLookupByLibrary.simpleMessage(
-            "La etiqueta otp es una cadena alfanumérica sin espacios que también admite :@.,;()\\\$%"),
         "permissionDenied":
             MessageLookupByLibrary.simpleMessage("Permiso denegado"),
         "qrScanner": MessageLookupByLibrary.simpleMessage("QR"),
-        "secretCode": MessageLookupByLibrary.simpleMessage("Clave"),
         "yes": MessageLookupByLibrary.simpleMessage("Si")
       };
 }

@@ -1,12 +1,9 @@
-
-
-
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 import 'package:base_app/ui/tx_widgets/tx_blur_dialog.dart';
 import 'package:base_app/ui/tx_widgets/tx_text_widget.dart';
 
 import '../../base/navigation_utils.dart';
-import '../../res/R.dart';
 
 Future txShowWarningDialogBlur(
   BuildContext context, {

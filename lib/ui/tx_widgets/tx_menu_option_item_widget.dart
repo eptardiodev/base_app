@@ -1,8 +1,8 @@
 
+import 'package:base_app/app_globals/R.dart';
 import 'package:flutter/material.dart';
 import 'package:base_app/ui/tx_widgets/tx_text_widget.dart';
 
-import '../../res/R.dart';
 
 class TXMenuOptionItemWidget extends StatelessWidget {
   final Widget? icon;

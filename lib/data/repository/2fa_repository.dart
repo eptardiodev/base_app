@@ -1,4 +1,4 @@
-import 'package:base_app/data/repository/_base_repository.dart';
+import 'package:base_app/data/repository/base_repository.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../domain/2fa/authenticated_entity_model.dart';

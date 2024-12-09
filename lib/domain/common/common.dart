@@ -1,0 +1,117 @@
+enum TODO_OBJECT_TYPE { TODO, EMS }
+enum TODO_CATEGORY { ASSIGNED_TO, ASSIGNED_BY, CREATED_BY, COMPLETED }
+enum TODO_STATUS { IN_PROGRESS, ON_HOLD, WAITING_FOR_APPROVAL, COMPLETED }
+enum TODO_PRIORITY { LOW, MEDIUM, HIGH }
+enum TODO_BY_PROJECT { ALL, NO_ASSOCIATED }
+//enum TODO_DETAIL_HISTORY { DETAIL, HISTORY }
+//enum TODO_DATE_GROUP { OVERDUE, UPCOMING }
+enum TODO_FILTER_TYPE { STATUS, PRIORITY, CATEGORY, PROJECT }
+enum CONTACTS_FILTER_TYPE { SORT_NAME }
+enum EMS_TYPE { EMS, DEFECTS }
+enum TODO_ACTIONS {
+  MARK_AS_COMPLETED,
+  APPROVE,
+  REJECT,
+  REQUEST_EXTENSION,
+  REASSIGN,
+  DELETE,
+  EDIT,
+  DOCUMENTS,
+  CANCEL
+}
+
+enum DOCUMENT_ACTIONS {
+  DOWNLOAD,
+  RENAME,
+  DELETE,
+  CANCEL,
+  CAMERA,
+  LIBRARY,
+  P2B,
+  VIDEO_GALLERY,
+  VIDEO_CAMERA
+}
+
+enum NOTE_OBJECT_TYPE { NOTEBOOK, PROJECT }
+
+//enum COMMENT_OBJECT_TYPE { TODO, EMS }
+
+enum DOCUMENT_OBJECT_TYPE { TODO, EMS, QCSHEET, DEFECTS_PROPERTIES, SYSTEM_SUBTYPE, LOG }
+
+enum DOWNLOAD_DOCUMENT_EXTENSION { OBJ, MTL, PDF }
+
+enum SCHEME_ACTION { CREATE, UPDATE }
+
+enum OBJECT_TYPE { NOTE, NOTEBOOK }
+
+enum VIEW_MODE { READ, ADD, EDIT }
+
+enum ADAPTER_VIEW_TYPE { HEADER, CONTENT }
+enum ADAPTER_GROUP_TYPE { BY_DATE, BY_NAME }
+enum GROUP_MODE { GROUP_DATE, DATE }
+
+//enum CONTACTS_PROJECTS_USERS { PROJECTS, USERS }
+//enum EMS_STATUS_TRACKER { MANUAL, SCHEDULE, TRACKING }
+//enum EMS_QCSHEET_TAB { INFORMATION, TABLE }
+
+const todoObjectType = "todoObjectType";
+const commentObjectType = "commentObjectType";
+const documentObjectType = "documentObjectType";
+const noteObjectType = "noteObjectType";
+
+enum FILE_TYPE {
+  FOLDER,
+  READONLYFOLDER,
+  NOACCESSFOLDER,
+  ADOBE,
+  CSV,
+  DAE,
+  DOCUMENT,
+  DWG,
+  DXF,
+  FBX,
+  GAEB,
+  IFC,
+  JPG,
+  JSON,
+  MSACCESS,
+  MSEXCEL,
+  MSPOWERPOINT,
+  MSPROJECT,
+  MSPUBLISHER,
+  MSVISIO,
+  MSWORD,
+  MTL,
+  OBJ,
+  STL,
+  ZIP,
+  MP3,
+  MP4,
+  MKV,
+  OGV,
+  FLAC,
+  WAV,
+  WEBM,
+  TXT,
+  HTM,
+  HTML,
+  HIDDEN
+}
+
+enum ORIGIN_TYPE { API, LOCAL }
+
+enum DEFECT_ACTIONS { CLONE, DELETE }
+
+enum HomeTab { Project, ToDo, QR, /*WorkFeed,*/ Settings }
+
+enum ListMode { List, Grid , Date}
+
+enum ListType { Recent, All }
+
+enum BuildingModelSystemTabs { Overview, Articles, Files }
+
+enum BuildingModelDefectsDetailTabs { Overview, /*Activity,*/ Tags, Files }
+
+enum ArticlePackageType { Bar, Piecewise, Pair, Pack }
+
+enum ArticleUoM { Meter, Number, Millimeter }

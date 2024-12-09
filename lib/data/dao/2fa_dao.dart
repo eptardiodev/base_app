@@ -1,14 +1,14 @@
 
 import 'dart:convert';
 
-import 'package:base_app/data/dao/_base/app_database.dart';
+import 'package:base_app/data/local/app_database.dart';
 import 'package:base_app/domain/2fa/authenticated_entity_model.dart';
 import 'package:base_app/domain/2fa/i_2fa_converter.dart';
 import 'package:base_app/domain/2fa/i_2fa_dao.dart';
 import 'package:sqflite/sqflite.dart';
 
 import '../../di/injector.dart';
-import '_base/db_constants.dart';
+import '../local/db_constants.dart';
 
 class TwoFaDao implements I2faDao {
   final AppDatabase _appDatabase;
