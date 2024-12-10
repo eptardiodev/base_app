@@ -1,12 +1,10 @@
 import 'package:base_app/app_globals/R.dart';
 import 'package:base_app/base/bloc_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'home_bloc.dart';
 
-
-
 class HomePage extends StatefulWidget {
-
   const HomePage({super.key});
 
   @override
@@ -14,8 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
-
-    int count = 0;
+  int count = 0;
 
   @override
   Widget buildWidget(BuildContext context) {
@@ -40,19 +37,22 @@ class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
         ),
       ),
       body: Center(
-        child: Column(
-          children: [
-            Text(
-              count.toString()),
-            Text(R.string.hello)
-          ],
-        )
-      ),
+          child: Column(
+        children: [Text(count.toString()), Text(R.string.hello)],
+      )),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              bloc.requestPermission();
+            },
+          ),
+        ],
         backgroundColor: R.color.primaryColor,
         leading: IconButton(
           icon: const Icon(Icons.other_houses_outlined),
-          onPressed: () {  },
+          onPressed: () {},
         ),
       ),
     );
