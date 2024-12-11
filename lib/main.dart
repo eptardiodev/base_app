@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:base_app/ui/home/home_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'package:flutter/material.dart';
 import 'package:base_app/app.dart';
@@ -12,6 +14,10 @@ void main() {
   Injector.init();
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
+
+    /// background message notification listener
+    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );

@@ -11,7 +11,15 @@ class HomePage extends StatefulWidget {
   State<StatefulWidget> createState() => _HomePageState();
 }
 
+
 class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
+
+  @override
+  void initState(){
+    super.initState();
+    bloc.init();
+  }
+
   int count = 0;
 
   @override
