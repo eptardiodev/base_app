@@ -51,10 +51,12 @@ class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
       appBar: AppBar(
         backgroundColor: R.color.primaryColor,
         leading: IconButton(
-          icon: const Icon(Icons.other_houses_outlined),
+          icon: const Icon(Icons.account_circle_outlined),
           onPressed: () {  },
         ),
       ),
+
     );
+
   }
 }

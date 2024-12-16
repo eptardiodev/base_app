@@ -22,3 +22,4 @@ class AppColor {
 
   final blurBackground = const Color(0xc8F6F7FB);
 }
+
