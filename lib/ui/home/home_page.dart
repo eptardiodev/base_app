@@ -16,15 +16,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
 
     int count = 0;
-
+    int countRes = 0;
   @override
   Widget buildWidget(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: R.color.primaryColor,
         onPressed: () {
-          setState(() {
             count += 1;
+            countRes = bloc.isPar(count);
+          setState(() {
+            countRes;
           });
         },
         child: Container(
@@ -43,7 +45,7 @@ class _HomePageState extends StateWithBloC<HomePage, HomeBloC> {
         child: Column(
           children: [
             Text(
-              count.toString()),
+              countRes.toString()),
             Text(R.string.hello)
           ],
         )

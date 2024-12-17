@@ -11,5 +11,18 @@ class HomeBloC extends BaseBloC with LoadingHandler, ErrorHandler {
   @override
   void dispose() {
   }
+
+  int count2 = 0;
+
+  int isPar (int num){
+
+    if(num.isEven){
+      return num;
+    } else {
+      return 0;
+    }
+
+  }
+
 }
 
